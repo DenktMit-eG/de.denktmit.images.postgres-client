@@ -19,8 +19,8 @@ jobs:
       - name: Build, tag and push Docker image
         id: build_image
         run: |
-          IMAGE_NAME="denktmiteg/postgresql-client-13.11"
+          IMAGE_NAME="denktmiteg/postgresql-client"
           DATETIME_TAG=$(date +'%Y%m%d%H%M%S')
-          docker build . --file Dockerfile --tag $IMAGE_NAME:latest --tag $IMAGE_NAME:$DATETIME_TAG
+          docker build . --file Dockerfile --tag $IMAGE_NAME:13.11-latest --tag $IMAGE_NAME:13.11-$DATETIME_TAG
           docker push $IMAGE_NAME:latest
           docker push $IMAGE_NAME:$DATETIME_TA
