@@ -22,5 +22,5 @@ jobs:
           IMAGE_NAME="denktmiteg/postgresql-client"
           DATETIME_TAG=$(date +'%Y%m%d%H%M%S')
           docker build . --file Dockerfile --tag $IMAGE_NAME:13.11-latest --tag $IMAGE_NAME:13.11-$DATETIME_TAG
-          docker push $IMAGE_NAME:latest
-          docker push $IMAGE_NAME:$DATETIME_TA
+          docker push $IMAGE_NAME:13.11-latest
+          docker push $IMAGE_NAME:13.11-$DATETIME_TAG
