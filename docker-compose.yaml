@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  pg_client:
+    image: denktmiteg/postgresql-client:13.11-latest
+    environment:
+      PGDATABASE: ${pg_database}
+      PGHOST: ${pg_host}
+      PGPORT: ${pg_port}
+      PGUSER: ${pg_user}
+      PGPASSWORD: ${pg_password}
